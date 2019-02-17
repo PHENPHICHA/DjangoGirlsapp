@@ -6,9 +6,15 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="page-header">
+             
+             
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
@@ -20,7 +26,7 @@
             {% endif %}
             <h1><a href="/">Phenphicha Blog</a></h1>
         </div>
-        <div class="content container">
+    <div class="content container">
             <div class="row">
                 <div class="col-md-8">
                     {% block content %}
@@ -28,5 +34,42 @@
                 </div>
             </div>
         </div>
+        <div class="jumbotron text-center">
+  <h1>Welcome to MY Diary</h1>
+  <p>Have fun!</p> 
+</div>
+  <div class="container">
+  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="https://i-h2.pinimg.com/564x/84/87/ab/8487abf70832ce926988a400794c5db0.jpg?b=t" target="_blank">
+          <img src="https://i-h2.pinimg.com/564x/84/87/ab/8487abf70832ce926988a400794c5db0.jpg?b=t" alt="Lights" style="width:100%">
+          
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="https://i-h2.pinimg.com/564x/29/71/9a/29719a44bfd0a7b1315701954155f3ad.jpg?b=t" target="_blank">
+          <img src="https://i-h2.pinimg.com/564x/29/71/9a/29719a44bfd0a7b1315701954155f3ad.jpg?b=t" alt="Nature" style="width:100%">
+          
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="https://i-h2.pinimg.com/564x/bf/23/fc/bf23fc0f91430485b67206c2f00db582.jpg?b=t" target="_blank">
+          <img src="https://i-h2.pinimg.com/564x/bf/23/fc/bf23fc0f91430485b67206c2f00db582.jpg?b=t" alt="Fjords" style="width:100%">
+          
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<form>
+               
+
+
     </body>
 </html>
